@@ -194,7 +194,10 @@ Refer to the below given image.
 ```
 System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 WebDriver driver = new ChromeDriver();
-driver.get("http://www.gmail.com/");
+WebElement email = driver.get("http://www.gmail.com/");
+
+email.sendKeys("joincloudtrain@gmail.com");
+driver.findElement(By.id("identifierNext")).click();
 System.out.println("Test Successful");
 ```
 
